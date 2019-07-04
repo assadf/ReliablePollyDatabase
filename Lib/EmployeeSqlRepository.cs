@@ -16,13 +16,16 @@ namespace Lib
 
         public async Task<Employee> GetEmployeeAsync(int id)
         {
-            using (var dbConnection = await _dbConnectionFactory().ConfigureAwait(false))
+            using (var conn = await _dbConnectionFactory().ConfigureAwait(false))
             {
-                await dbConnection.ExecuteAsync("THROW 50001, 'Oops Error Occurred!!!', 1").ConfigureAwait(false);
-                var employee = await dbConnection.QueryFirstOrDefaultAsync<Employee>("SELECT 1 as ID, 'Joe' as FirstName, 'Blog' as LastName, 100 as DepartmentID").ConfigureAwait(false);
-
-                return employee;
+                //return await conn.QueryFirstOrDefaultAsync<Employee>("WAITFOR DELAY '00:00:10'; Select 1 as ID").ConfigureAwait(false);
+                return await conn.QueryFirstOrDefaultAsync<Employee>("THROW 50000, 'Oops, Some Error!!!', 1").ConfigureAwait(false);
             }
+        }
+
+        public async Task InsertEmployeeAsync()
+        {
+
         }
     }
 }
