@@ -50,8 +50,11 @@ namespace ReliablePollyDbApp
         {
             IAsyncPolicy[] policies =
             {
-                Policy.Handle<SqlException>().WaitAndRetryAsync(2, i => TimeSpan.FromMilliseconds(1000)),
-                Policy.Handle<TimeoutRejectedException>().WaitAndRetryAsync(1, i => TimeSpan.FromMilliseconds(1000)),
+                Policy
+                    .Handle<SqlException>()
+                    .Or<TimeoutRejectedException>()
+                    .WaitAndRetryAsync(3, i => TimeSpan.FromMilliseconds(1000)),
+                //Policy.Handle<TimeoutRejectedException>().WaitAndRetryAsync(1, i => TimeSpan.FromMilliseconds(1000)),
                 Policy.TimeoutAsync(5, TimeoutStrategy.Pessimistic)
             };
 
