@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReliablePollyDbApp", "ReliablePollyDbApp.csproj", "{909F09D7-7A52-422A-BBC4-DF9DDC42933B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib", "..\Lib\Lib.csproj", "{D4FB179A-A61A-4195-835D-F3B2B73AF4C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{909F09D7-7A52-422A-BBC4-DF9DDC42933B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{909F09D7-7A52-422A-BBC4-DF9DDC42933B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{909F09D7-7A52-422A-BBC4-DF9DDC42933B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{909F09D7-7A52-422A-BBC4-DF9DDC42933B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4FB179A-A61A-4195-835D-F3B2B73AF4C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4FB179A-A61A-4195-835D-F3B2B73AF4C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4FB179A-A61A-4195-835D-F3B2B73AF4C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4FB179A-A61A-4195-835D-F3B2B73AF4C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6783192E-882C-4CA3-BEF6-94A1E2CBCB24}
+	EndGlobalSection
+EndGlobal
